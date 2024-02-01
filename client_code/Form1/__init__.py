@@ -10,3 +10,9 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+  item_list = []
+  for row in app_tables.costdata.search():
+      item_list.append((row["itemNumber"], row))
+
+  drop_down_cost_items.items = item_list
+  #self.drop_down_cost_items.items = [(row["itemNumber"], row) for row in app_tables.costdata.search()]
