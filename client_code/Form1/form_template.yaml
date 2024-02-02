@@ -9,7 +9,11 @@ components:
   layout_properties: {slot: default}
   components:
   - name: drop_down_cost_items
-    properties: {visible: true}
+    properties:
+      visible: true
+      items: ['']
+      placeholder: None
+      include_placeholder: true
     type: DropDown
     layout_properties: {grid_position: 'JSZFNU,HBIDHO'}
     data_bindings:
