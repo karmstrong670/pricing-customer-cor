@@ -31,4 +31,4 @@ def import_excel_data(file):
       # keyword arguments
       app_tables.costdata.add_row(**d)
 
-  #import_excel_data("AnvilTestFile.xlsx")
+  import_excel_data("AnvilTestFile.xlsx")
