@@ -16,7 +16,7 @@ class Form1(Form1Template):
 
     # Any code you write here will run before the form opens.  
     #anvil.users.login_with_form()
-    self.drop_down_cost_items.items = [(row["itemNumber"], row) for row in app_tables.costdata.search(itemNumber="2690-10")]
+    self.drop_down_cost_items.items = [(row["itemNumber"], row) for row in app_tables.costdata.search(itemNumber=q.like('%10%'))]
 
 
     
