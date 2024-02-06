@@ -4,10 +4,27 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"FDLMHK":10,"MXQDZQ":50,"XSAOYL":10,"HBIDHO":50,"AUJVLJ":10,"HNGOYX":50,"MYLBAO":10,"RSXCWF":50}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: image_1
+    properties: {source: _/theme/CCLLogo.png}
+    type: Image
+    layout_properties: {grid_position: 'PIZPQN,UTQPVI'}
+  - name: label_item_search
+    properties: {text: 'Enter Item Number:', bold: true, align: left}
+    type: Label
+    layout_properties: {grid_position: 'XDPEQR,FDLMHK'}
+  - name: txtboxItem
+    properties: {placeholder: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'XDPEQR,MXQDZQ'}
+    event_bindings: {pressed_enter: txtboxItem_pressed_enter}
+  - name: label_select_item
+    properties: {text: 'Select Item :', bold: true, align: left}
+    type: Label
+    layout_properties: {grid_position: 'JSZFNU,XSAOYL'}
   - name: drop_down_cost_items
     properties:
       visible: true
@@ -18,11 +35,27 @@ components:
     layout_properties: {grid_position: 'JSZFNU,HBIDHO'}
     data_bindings:
     - {property: selected_value, code: 'self.item['''']', writeback: false}
+    event_bindings: {change: drop_down_cost_items_change}
+  - name: label_cost
+    properties: {text: 'Select Quantity :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'HIEJCK,AUJVLJ'}
+  - name: drop_down_cost_uofm
+    properties: {include_placeholder: true, placeholder: None}
+    type: DropDown
+    layout_properties: {grid_position: 'HIEJCK,HNGOYX'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item['''']', writeback: false}
+    event_bindings: {change: drop_down_cost_uofm_change}
+  - name: label_price
+    properties: {text: 'Price :', italic: false, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'YNHDNQ,MYLBAO'}
+  - name: label_price_final
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'YNHDNQ,RSXCWF'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- name: label_1
-  properties: {text: CCL Label}
-  type: Label
-  layout_properties: {slot: title}

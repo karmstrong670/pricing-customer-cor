@@ -20,6 +20,18 @@ class Form1(Form1Template):
     #anvil.users.login_with_form()
     self.drop_down_cost_items.items = [(row["itemNumber"], row) for row in app_tables.costdata.search(itemNumber=q.like('%10%'))]
 
+  def txtboxItem_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def drop_down_cost_items_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
+
+  def drop_down_cost_uofm_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
+
 
     
   
