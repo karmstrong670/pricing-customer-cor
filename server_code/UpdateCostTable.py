@@ -2,6 +2,7 @@ import anvil.files
 from anvil.files import data_files
 import anvil.users
 import anvil.tables as tables
+from anvil.tables import app_tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
@@ -20,8 +21,9 @@ import pandas as pd
 #   print("Hello, " + name + "!")
 #   return 42
 #
+#anvil.server.connect("server_T7BB4FRZ2ZQPS7LGZYP4VY4F-T4DSUVPVTZK3CXVC")
 
-@anvil.server.callable
+#@anvil.server.callable
 def import_excel_data(file):
   with open(file, "rb") as f:
     df = pd.read_excel(f)
@@ -31,4 +33,4 @@ def import_excel_data(file):
       # keyword arguments
       app_tables.costdata.add_row(**d)
 
-  import_excel_data("AnvilTestFile.xlsx")
+#import_excel_data("AnvilTestFile.xlsx")
