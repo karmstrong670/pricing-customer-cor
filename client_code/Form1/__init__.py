@@ -15,7 +15,7 @@ class Form1(Form1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
-
+    anvil.server.call('import_excel_data', "AnvilTestFile.xlsx")
     # Any code you write here will run before the form opens.  
     #anvil.users.login_with_form()
     self.drop_down_cost_items.items = [(row["itemNumber"], row) for row in app_tables.costdata.search(itemNumber=q.like('%10%'))]
