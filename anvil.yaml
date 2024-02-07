@@ -11,6 +11,7 @@ services:
 - source: /runtime/services/anvil/files.yml
   client_config: {}
   server_config: {file_table: files}
+startup: {type: form, module: MainPage}
 package_name: CCL_Pricing_Corteva
 allow_embedding: false
 name: CCL Pricing Corteva
@@ -21,7 +22,7 @@ runtime_options:
   server_spec: {base: python310-standard}
   server_spec_disabled: {requirements: '', base: python310-standard}
 metadata: {logo_img: 'asset:CCLLogo.png', title: CCL Label Pricing}
-startup_form: Form1
+startup_form: null
 db_schema:
   costdata:
     client: search

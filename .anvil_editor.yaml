@@ -1,6 +1,7 @@
 unique_ids:
   forms:
-    Form1: HXRQHZ7NKANGIRGVVDBZP55CHFL4QIKQ
+    MainPage: HXRQHZ7NKANGIRGVVDBZP55CHFL4QIKQ
+    UpdateTask: '1707349500551186579998856.93277'
   modules: {}
   server_modules:
     UpdateCostTable: '1707173980717865871344915.9954'
