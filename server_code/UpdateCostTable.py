@@ -27,7 +27,8 @@ import pandas as pd
 
 @anvil.server.callable
 def import_excel_data(file):
-  with open(file, "rb") as f:
+  with anvil.files.data_files.open(file,"rb") as f:
+  #with open(file, "rb") as f:
     df = pd.read_excel(f)
     for d in df.to_dict(orient="records"):
       # d is now a dict of {columnname -> value} for this row
