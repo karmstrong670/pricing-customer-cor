@@ -24,9 +24,9 @@ class Form1(Form1Template):
   def txtboxItem_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     "need to add distinct search"
-    self.drop_down_cost_items.items = set([(row["itemNumber"], row) for row in app_tables.costdata.search(
+    self.drop_down_cost_items.items = set((row["itemNumber"], row) for row in app_tables.costdata.search(
       tables.order_by("itemNumber"),
-      itemNumber=q.like('%'+self.txtboxItem.text+'%'))])
+      itemNumber=q.like('%'+self.txtboxItem.text+'%')))
     
     pass
   
