@@ -27,6 +27,7 @@ import pandas as pd
 
 @anvil.server.callable
 def import_excel_data(file):
+  app_tables.costdata.delete_all_rows()
   with anvil.files.data_files.open(file,"rb") as f:
   #with open(file, "rb") as f:
     df = pd.read_excel(f)
@@ -34,6 +35,8 @@ def import_excel_data(file):
       # d is now a dict of {columnname -> value} for this row
       # We use Python's **kwargs syntax to pass the whole dict as
       # keyword arguments
-      app_tables.costdata.add_row(**d)
+      
+      #app_tables.costdata.add_row(**d)
+      app_tables.costdata.add_row(itemNumber=str(d["itemNumber"]),description= d["description"],unitOfMeasure=d["unitOfMeasure"],labelType=d["labelType"],price=d["price"])
 
 #import_excel_data("AnvilTestFile.xlsx")
