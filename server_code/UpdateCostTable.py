@@ -23,7 +23,7 @@ import pandas as pd
 #
 #anvil.server.connect("server_T7BB4FRZ2ZQPS7LGZYP4VY4F-T4DSUVPVTZK3CXVC")
 
-#@anvil.server.callable
+@anvil.server.callable
 def import_excel_data(file):
   with open(file, "rb") as f:
     df = pd.read_excel(f)

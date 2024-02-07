@@ -10,9 +10,9 @@ services:
 - source: /runtime/services/anvil/files.yml
   client_config: {}
   server_config: {file_table: files}
-package_name: CCL_Pricing
+package_name: CCL_Pricing_Corteva
 allow_embedding: false
-name: CCL Pricing
+name: CCL Pricing Corteva
 runtime_options:
   version: 2
   client_version: '3'
@@ -73,7 +73,7 @@ db_schema:
     title: Users
   files:
     client: none
-    server: full
+    server: search
     columns:
     - name: path
       admin_ui: {order: 0, width: 200}

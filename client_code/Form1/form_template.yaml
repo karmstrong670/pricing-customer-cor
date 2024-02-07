@@ -52,9 +52,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'YNHDNQ,MYLBAO'}
   - name: label_price_final
-    properties: {}
+    properties: {bold: true, font_size: 20}
     type: Label
     layout_properties: {grid_position: 'YNHDNQ,RSXCWF'}
+    data_bindings: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
