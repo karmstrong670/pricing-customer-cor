@@ -21,6 +21,8 @@ import pandas as pd
 #   print("Hello, " + name + "!")
 #   return 42
 #
+
+#import anvil.server
 #anvil.server.connect("server_T7BB4FRZ2ZQPS7LGZYP4VY4F-T4DSUVPVTZK3CXVC")
 
 @anvil.server.callable
