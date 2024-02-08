@@ -1,10 +1,4 @@
-scheduled_tasks:
-- task_name: import_excel_data
-  time_spec:
-    n: 1
-    every: day
-    at: {minute: 0, hour: 11}
-  job_id: QHRDHJVW
+scheduled_tasks: []
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
@@ -17,7 +11,7 @@ services:
 - source: /runtime/services/anvil/files.yml
   client_config: {}
   server_config: {file_table: files}
-startup: {type: form, module: MainPage}
+startup: {type: form, module: UpdateTask}
 package_name: CCL_Pricing_Corteva
 allow_embedding: false
 name: CCL Pricing Corteva
