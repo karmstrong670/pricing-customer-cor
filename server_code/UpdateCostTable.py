@@ -41,9 +41,9 @@ def import_excel_data():
       #app_tables.costdata.add_row(**d)
       app_tables.costdata.add_row(itemNumber=str(d["itemNumber"]),description= d["description"],unitOfMeasure=d["unitOfMeasure"],labelType=d["labelType"],price=d["price"])
 
-
-#def launch_update_task():
-  #task = anvil.server.launch_background_task('import_excel_data')
-  #return task
+@anvil.server.callable
+def launch_update_task():
+  task = anvil.server.launch_background_task('import_excel_data')
+  return task
 
 #import_excel_data("AnvilTestFile.xlsx")
