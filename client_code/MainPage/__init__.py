@@ -18,7 +18,7 @@ class MainPage(MainPageTemplate):
     #anvil.server.call('import_excel_data', "AnvilTestFile.xlsx")
   
     # Any code you write here will run before the form opens.  
-    #anvil.users.login_with_form()
+    anvil.users.login_with_form()
     
   
   
