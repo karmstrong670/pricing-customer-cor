@@ -24,11 +24,13 @@ import pandas as pd
 
 #import anvil.server
 #anvil.server.connect("server_T7BB4FRZ2ZQPS7LGZYP4VY4F-T4DSUVPVTZK3CXVC")
-
-@anvil.server.callable
-def import_excel_data(file):
+#@anvil.server.callable
+#def import_excel_data(file):
+# with anvil.files.data_files.open(file,"rb") as f:
+@anvil.server.background_task
+def import_excel_data():
   app_tables.costdata.delete_all_rows()
-  with anvil.files.data_files.open(file,"rb") as f:
+  with anvil.files.data_files.open("AnvilTestFile.xlsx","rb") as f:
   #with open(file, "rb") as f:
     df = pd.read_excel(f)
     for d in df.to_dict(orient="records"):
@@ -39,5 +41,9 @@ def import_excel_data(file):
       #app_tables.costdata.add_row(**d)
       app_tables.costdata.add_row(itemNumber=str(d["itemNumber"]),description= d["description"],unitOfMeasure=d["unitOfMeasure"],labelType=d["labelType"],price=d["price"])
 
+
+#def launch_update_task():
+  #task = anvil.server.launch_background_task('import_excel_data')
+  #return task
+
 #import_excel_data("AnvilTestFile.xlsx")
-anvil.server.launch_background_task('import_excel_data',"AnvilTestFile.xlsx")

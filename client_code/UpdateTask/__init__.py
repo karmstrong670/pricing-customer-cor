@@ -12,5 +12,5 @@ class UpdateTask(UpdateTaskTemplate):
     self.init_components(**properties)
 
     
-    anvil.server.call('import_excel_data', "AnvilTestFile.xlsx")
+    self.task = anvil.server.call('import_excel_data',"AnvilTestFile.xlsx")
     # Any code you write here will run before the form opens.
