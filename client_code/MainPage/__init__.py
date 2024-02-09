@@ -38,7 +38,7 @@ class MainPage(MainPageTemplate):
   
   def drop_down_cost_items_change(self, **event_args):
     """This method is called when an item is selected"""
-    print(self.drop_down_cost_items.selected_value)
+    #print(self.drop_down_cost_items.selected_value)
     self.drop_down_cost_uofm.items = set((row["unitOfMeasure"]) for row in app_tables.costdata.search(
       itemNumber=self.drop_down_cost_items.selected_value) )
     self.label_price_final.text = ""

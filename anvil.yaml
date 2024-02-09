@@ -1,4 +1,10 @@
-scheduled_tasks: []
+scheduled_tasks:
+- task_name: import_excel_data
+  time_spec:
+    n: 1
+    every: day
+    at: {minute: 0, hour: 8}
+  job_id: XQJVWKOH
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
