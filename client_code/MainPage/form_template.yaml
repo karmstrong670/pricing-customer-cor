@@ -17,7 +17,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'XDPEQR,FDLMHK'}
   - name: txtboxItem
-    properties: {placeholder: '', tooltip: Press enter to search}
+    properties: {placeholder: Press enter to search, tooltip: Press enter to search}
     type: TextBox
     layout_properties: {grid_position: 'XDPEQR,MXQDZQ'}
     event_bindings: {pressed_enter: txtboxItem_pressed_enter}
