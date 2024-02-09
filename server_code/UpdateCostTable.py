@@ -39,7 +39,7 @@ def import_excel_data():
       # keyword arguments
       
       #app_tables.costdata.add_row(**d)
-      app_tables.costdata.add_row(itemNumber=str(d["itemNumber"]),description= d["description"],unitOfMeasure=d["unitOfMeasure"],labelType=d["labelType"],price=d["price"])
+      app_tables.costdata.add_row(itemNumber=str(d["itemNumber"]),description= str(d["description"]) + " ",unitOfMeasure=d["unitOfMeasure"],labelType=d["labelType"],price=d["price"])
 
 @anvil.server.callable
 def launch_update_task():
