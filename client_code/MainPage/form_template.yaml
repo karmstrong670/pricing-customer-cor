@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: image_1
-    properties: {source: _/theme/CCLLogo.png}
+    properties: {source: _/theme/CCL_Logo_OnWhite_RGB.png}
     type: Image
     layout_properties: {grid_position: 'PIZPQN,UTQPVI'}
   - name: label_item_search
