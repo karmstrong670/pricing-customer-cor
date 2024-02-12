@@ -27,7 +27,7 @@ runtime_options:
   server_version: python3-full
   server_spec: {base: python310-standard}
   server_spec_disabled: {requirements: '', base: python310-standard}
-metadata: {logo_img: 'asset:CCLLogo.png', title: CCL Label Pricing}
+metadata: {logo_img: 'asset:CCL_Logo_OnWhite_RGB.png', title: CCL Label Pricing}
 startup_form: null
 db_schema:
   costdata:
