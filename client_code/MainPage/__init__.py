@@ -30,9 +30,13 @@ class MainPage(MainPageTemplate):
     self.drop_down_cost_items.items = set((row["itemNumber"]) for row in app_tables.costdata.search(
       tables.order_by("itemNumber"),
       itemNumber=q.like(''+self.txtboxItem.text+'%')))
-    
+   
+    # resets dropdown for qty and price text
     self.drop_down_cost_uofm.items = items
-    self.label_price_final.text = ""
+    self.label_price_final.text = "" 
+    
+    if len(items) == 1 :
+      self.drop_down_cost_items.selected_value = items[0]
     
     pass
   
@@ -41,7 +45,7 @@ class MainPage(MainPageTemplate):
     #print(self.drop_down_cost_items.selected_value)
     self.drop_down_cost_uofm.items = set((row["unitOfMeasure"]) for row in app_tables.costdata.search(
       itemNumber=self.drop_down_cost_items.selected_value) )
-    self.label_price_final.text = ""
+    self.label_price_final.text = "" #resets price text 
     pass
 
   def drop_down_cost_uofm_change(self, **event_args):
