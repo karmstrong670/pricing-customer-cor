@@ -29,7 +29,7 @@ class MainPage(MainPageTemplate):
     
     self.drop_down_cost_items.items = set((row["itemNumber"]) for row in app_tables.costdata.search(
       tables.order_by("itemNumber"),
-      itemNumber=q.like('%'+self.txtboxItem.text+'%')))
+      itemNumber=q.like(''+self.txtboxItem.text+'%')))
     
     self.drop_down_cost_uofm.items = items
     self.label_price_final.text = ""
