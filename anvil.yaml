@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/files.yml
   client_config: {}
   server_config: {file_table: files}
-startup: {type: form, module: MainPage}
+startup: {type: form, module: UpdateTask}
 package_name: CCL_Pricing_Corteva
 allow_embedding: false
 name: CCL Pricing Corteva
