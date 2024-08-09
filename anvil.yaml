@@ -17,9 +17,9 @@ services:
   client_config: {}
   server_config: {file_table: files}
 startup: {type: form, module: UpdateTask}
-package_name: CCL_Pricing_Scotts
+package_name: CCL_Pricing_Corteva
 allow_embedding: false
-name: CCL Pricing Scotts
+name: CCL Pricing Corteva
 runtime_options:
   version: 2
   client_version: '3'
