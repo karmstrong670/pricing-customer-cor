@@ -30,7 +30,7 @@ import pandas as pd
 @anvil.server.background_task
 def import_excel_data():
   app_tables.costdata.delete_all_rows()
-  with anvil.files.data_files.open("AnvilTestFile.xlsx","rb") as f:
+  with anvil.files.data_files.open("AnvilTestFileScotts.xlsx","rb") as f:
   #with open(file, "rb") as f:
     df = pd.read_excel(f)
     for d in df.to_dict(orient="records"):

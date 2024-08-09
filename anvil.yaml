@@ -11,16 +11,15 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: false, use_email: true,
-    confirm_email: true, require_secure_passwords: true}
+  client_config: {allow_signup: true, enable_automatically: false, use_email: true, confirm_email: true, require_secure_passwords: true}
   server_config: {user_table: users}
 - source: /runtime/services/anvil/files.yml
   client_config: {}
   server_config: {file_table: files}
 startup: {type: form, module: UpdateTask}
-package_name: CCL_Pricing_Corteva
+package_name: CCL_Pricing_Scotts
 allow_embedding: false
-name: CCL Pricing Corteva
+name: CCL Pricing Scotts
 runtime_options:
   version: 2
   client_version: '3'
