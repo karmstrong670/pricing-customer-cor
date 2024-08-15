@@ -1,18 +1,11 @@
-scheduled_tasks:
-- task_name: import_excel_data
-  time_spec:
-    n: 1
-    every: day
-    at: {minute: 0, hour: 8}
-  job_id: XQJVWKOH
+scheduled_tasks: []
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: false, use_email: true,
-    confirm_email: true, require_secure_passwords: true}
+  client_config: {allow_signup: true, enable_automatically: false, use_email: true, confirm_email: true, require_secure_passwords: true}
   server_config: {user_table: users}
 - source: /runtime/services/anvil/files.yml
   client_config: {}
